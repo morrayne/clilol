@@ -1,0 +1,197 @@
+/* RESET CSS */
+*,
+*::before,
+*::after {
+  width: fit-content;
+  height: fit-content;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul,
+ol {
+  list-style: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* STYLES */
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  --main-color: #e8e8e8;
+  --main-bg: #fff;
+  --main-text: #000;
+  --main-grey: #eee;
+}
+html {
+  width: 100vw;
+  overflow-x: hidden;
+  background: var(--main-bg);
+}
+body {
+  width: 100vw;
+  max-width: 1920px;
+  min-height: 100vh;
+  margin: auto;
+  font-family: "Jost", sans-serif;
+  background: var(--main-color);
+  color: var(--main-text);
+}
+.wrapper {
+  width: 100%;
+  display: flex;
+}
+.navigation {
+  width: 64px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--main-bg);
+  padding: 8px;
+  transition: 0.4s;
+}
+.navigation img {
+  width: 48px;
+  aspect-ratio: 1 / 1;
+  cursor: pointer;
+  /* filter: invert(1); */
+}
+.navigation .nav-list {
+  width: 100%;
+  display: none;
+  margin-top: 12px;
+  /* padding: 0 6px; */
+  flex-direction: column;
+  /* gap: 6px; */
+  opacity: 0;
+  color: var(--main-text);
+  transition: 0.4s;
+}
+.navigation .nav-list .main-link {
+  width: 100%;
+  font-size: 20px;
+  padding: 2px 12px;
+  transition: 0.4s;
+}
+.navigation .nav-list .main-link:hover,
+.navigation .nav-list .main-link:focus,
+.navigation .nav-list .main-link:active {
+  background: var(--main-grey);
+}
+
+.container {
+  flex: 1;
+  height: 100%;
+  padding: 12px 48px;
+  display: flex;
+  flex-direction: column;
+}
+.container h1 {
+  font-size: 36px;
+}
+.container .duo {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+.container .duo ul {
+  flex: 1;
+  display: flex;
+  gap: 2%;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.container .duo ul li {
+  width: 49%;
+  color: var(--main-text);
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(100, 100, 111, 0) 0px 7px 29px 0px;
+  transition: 0.4s;
+}
+.container .duo ul li:hover {
+  box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 29px 0px;
+}
+.container .duo ul li span {
+  width: 100%;
+  font-size: 20px;
+  background: var(--main-bg);
+  padding: 4px 12px 2px;
+  border-radius: 8px 8px 0 0;
+}
+.container .duo ul li p {
+  width: 100%;
+  font-size: 14px;
+  background: var(--main-grey);
+  padding: 2px 18px 6px;
+  border-radius: 0 0 12px 12px;
+}
+.container .duo .banner {
+  width: 290px;
+  aspect-ratio: 1 / 1;
+  padding: 8px;
+  background: var(--main-bg);
+  border-radius: 12px;
+  position: relative;
+}
+.container .duo .banner .img-holder {
+  width: calc(100% - 16px);
+  aspect-ratio: 1 / 1;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+}
+.container .duo .banner img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+  transition: 0.4s;
+}
+.container .duo .banner button {
+  width: 16px;
+  aspect-ratio: 1 / 1;
+  position: absolute;
+  bottom: 20px;
+  background: var(--main-bg);
+  border-radius: 50%;
+  transition: 0.4s;
+}
+.container .duo .banner button:hover {
+  scale: 1.1;
+}
