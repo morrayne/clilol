@@ -1,23 +1,62 @@
-let banner = document.querySelector(".banner");
-let bannerImg = document.querySelector(".banner").querySelectorAll("img");
-const bannerImgAmmount = bannerImg.length;
-let bannerButtonData = {
-  count: 1,
-  margin: 24,
-};
+const slides = document.querySelectorAll(".banner .img-holder img");
+const imgHolder = document.querySelector(".banner .img-holder");
+const prevBtn = document.querySelector(".banner .prev");
+const nextBtn = document.querySelector(".banner .next");
+const dotsContainer = document.querySelector(".banner .dots");
 
-for (let i = 0; i < bannerImgAmmount; i++) {
-  let button = document.createElement("button");
-  button.style.left = `${bannerButtonData.margin * i + 20}px`;
-  button.value = i;
-  banner.appendChild(button);
+let currentSlide = 0;
+let autoSlideInterval;
+
+slides.forEach((_, i) => {
+  const dot = document.createElement("button");
+  if (i === 0) dot.classList.add("active");
+  dot.addEventListener("click", () => goToSlide(i));
+  dotsContainer.appendChild(dot);
+});
+
+const dots = dotsContainer.querySelectorAll("button");
+
+function updateSlider() {
+  imgHolder.style.transform = `translateX(-${currentSlide * 100}%)`;
+  dots.forEach((dot, i) => {
+    dot.classList.toggle("active", i === currentSlide);
+  });
 }
 
-banner.addEventListener("click", function (event) {
-  if (event.target.tagName === "BUTTON") {
-    const slideIndex = parseInt(event.target.value);
-    bannerImg.forEach((img) => {
-      img.style.transform = `translateX(-${slideIndex * 274}px)`;
-    });
-  }
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % slides.length;
+  updateSlider();
+}
+
+function prevSlide() {
+  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+  updateSlider();
+}
+
+function goToSlide(index) {
+  currentSlide = index;
+  updateSlider();
+}
+
+nextBtn.addEventListener("click", () => {
+  nextSlide();
+  resetAutoSlide();
 });
+prevBtn.addEventListener("click", () => {
+  prevSlide();
+  resetAutoSlide();
+});
+
+function startAutoSlide() {
+  autoSlideInterval = setInterval(nextSlide, 4000);
+}
+function stopAutoSlide() {
+  clearInterval(autoSlideInterval);
+}
+function resetAutoSlide() {
+  stopAutoSlide();
+  startAutoSlide();
+}
+
+updateSlider();
+startAutoSlide();
