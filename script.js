@@ -48,3 +48,65 @@ function showBurgerMenuText(show) {
 }
 
 closeBurgerMenu();
+
+// Аккордеон
+document.querySelectorAll(".accordion-header").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    // Закрываем все открытые аккордеоны
+    const allBodies = document.querySelectorAll(".accordion-body");
+    const allHeaders = document.querySelectorAll(".accordion-header");
+
+    allBodies.forEach((body) => {
+      if (body !== btn.nextElementSibling) {
+        body.classList.remove("open");
+      }
+    });
+
+    allHeaders.forEach((header) => {
+      if (header !== btn) {
+        header.classList.remove("active");
+      }
+    });
+
+    // Переключаем текущий аккордеон
+    const body = btn.nextElementSibling;
+    body.classList.toggle("open");
+    btn.classList.toggle("active");
+  });
+});
+
+// Закрытие при клике вне аккордеона (опционально)
+document.addEventListener("click", (e) => {
+  if (!e.target.closest(".accordion-item")) {
+    document.querySelectorAll(".accordion-body").forEach((body) => {
+      body.classList.remove("open");
+    });
+    document.querySelectorAll(".accordion-header").forEach((header) => {
+      header.classList.remove("active");
+    });
+  }
+});
+
+// Слайдер отзывов
+let currentSlide = 0;
+const slides = document.querySelectorAll(".slide");
+function showSlide(n) {
+  slides.forEach((s) => s.classList.remove("active"));
+  slides[n].classList.add("active");
+}
+document.querySelector(".next-section").addEventListener("click", () => {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+});
+document.querySelector(".prev-section").addEventListener("click", () => {
+  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+  showSlide(currentSlide);
+});
+
+// Форма
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  document.getElementById("formMessage").textContent =
+    "Спасибо! Мы свяжемся с вами.";
+  this.reset();
+});

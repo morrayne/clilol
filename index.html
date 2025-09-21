@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <script src="./banner.js" defer></script>
-    <script src="./script.js" defer></script>
+    <script src="./banner.js" type="module" defer></script>
+    <script src="./script.js" type="module" defer></script>
     <title>Blue Lock – Футбольная школа</title>
   </head>
   <body>
@@ -24,10 +24,7 @@
 
       <div class="page">
         <header class="header">
-          <h1>
-            Добро пожаловать в частную футбольную школу "Blue Lock". Мы создаём
-            игроков будущего.
-          </h1>
+
           <div class="banner">
             <div class="img-holder">
               <img src="./res/dawg.jpg" alt="Слайд 1" />
@@ -49,11 +46,152 @@
               создаём игроков будущего.
             </h1>
           </div>
+          <!-- Hero Section -->
+          <section class="hero">
+            <div class="container">
+              <h1>Blue Lock ⚽</h1>
+              <p>Частная школа футбола для детей и подростков</p>
+              <a href="#program" class="btn">Записаться на тренировку</a>
+            </div>
+          </section>
+
+          <!-- About Section -->
+          <section class="about">
+            <div class="container">
+              <h2>О нашей школе</h2>
+              <p>
+                Мы обучаем футболу с нуля и развиваем профессиональные навыки
+                для будущих чемпионов. Тренировки проходят с опытными тренерами
+                по уникальной методике.
+              </p>
+            </div>
+          </section>
+
+          <!-- Program Section -->
+    <section id="program" class="program">
+        <div class="container">
+            <h2>Программа тренировок</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>Начальная группа (6-9 лет)</span>
+                        <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+                        </svg>
+                    </button>
+                    <div class="accordion-body">
+                        <div class="accordion-content">
+                            <p>
+                                Игровая форма обучения, развитие координации и командного
+                                духа.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>Средняя группа (10-13 лет)</span>
+                        <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+                        </svg>
+                    </button>
+                    <div class="accordion-body">
+                        <div class="accordion-content">
+                            <p>
+                                Технические элементы, тактическое мышление, первые
+                                турниры.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>Старшая группа (14-17 лет)</span>
+                        <svg class="accordion-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
+                        </svg>
+                    </button>
+                    <div class="accordion-body">
+                        <div class="accordion-content">
+                            <p>
+                                Продвинутая техника, участие в соревнованиях, подготовка к
+                                проф. карьере.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+          <!-- Reviews Section -->
+          <section class="reviews">
+            <div class="container">
+              <h2>Отзывы родителей</h2>
+              <div class="slider">
+                <div class="slide active">
+                  "Сын стал увереннее и дисциплинированнее!" – Анна
+                </div>
+                <div class="slide">
+                  "Отличные тренеры и дружеская атмосфера." – Сергей
+                </div>
+                <div class="slide">
+                  "Результаты заметны уже через месяц занятий." – Ирина
+                </div>
+              </div>
+              <div class="slider-controls">
+                <button class="prev-section">←</button>
+                <button class="next-section">→</button>
+              </div>
+            </div>
+          </section>
+
+          <!-- Contact Form Section -->
+          <section class="contact">
+            <div class="container">
+              <h2>Запишитесь на пробное занятие</h2>
+              <form id="contactForm">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Ваше имя"
+                  required
+                />
+                <input type="tel" name="phone" placeholder="Телефон" required />
+                <input type="email" name="email" placeholder="Email" required />
+                <button type="submit" class="btn">Отправить заявку</button>
+              </form>
+              <p id="formMessage" class="form-message"></p>
+            </div>
+          </section>
         </main>
 
         <footer class="footer">
           <div class="container">
-            <p>© 2025 Blue Lock. Все права защищены.</p>
+            <div class="footer__top">
+              <div class="footer__brand">
+                <h3>Blue Lock</h3>
+                <p>Частная школа футбола</p>
+              </div>
+              <div class="footer__contacts">
+                <p>
+                  <strong>Телефон:</strong>
+                  <a href="tel:+79991234567">+7 (999) 123-45-67</a>
+                </p>
+                <p>
+                  <strong>Email:</strong>
+                  <a href="mailto:info@bluelock.ru">info@bluelock.ru</a>
+                </p>
+              </div>
+              <div class="footer__socials">
+                <a href="https://t.me/bluelock" target="_blank">Telegram</a>
+                <a href="https://vk.com/bluelock" target="_blank">ВКонтакте</a>
+              </div>
+            </div>
+            <div class="footer__bottom">
+              <p>© 2025 Blue Lock. Все права защищены.</p>
+              <p>ОГРН: 1234567890123 | ИНН: 1234567890</p>
+            </div>
           </div>
         </footer>
       </div>
