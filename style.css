@@ -16,25 +16,31 @@ body {
 body {
   margin: 0;
   font-family: "Jost", sans-serif;
-  background: var(--main-color);
+  background: var(--main-bg);
   color: var(--main-text);
 }
 
 .wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
   display: flex;
   min-height: 100vh;
 }
 
 .navigation {
+  height: 100vw;
   display: flex;
   flex-direction: column;
   background: var(--main-bg);
   padding: 8px;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
   transition: 0.4s;
 }
 
 .navigation img {
-  width: 48px;
+  width: 64px;
   aspect-ratio: 1 / 1;
   cursor: pointer;
 }
@@ -50,12 +56,12 @@ body {
 }
 
 .navigation .nav-list .main-link {
-  width: 100%;
-  font-size: 18px;
+  font-size: 22px;
   padding: 6px 12px;
   text-decoration: none;
   color: var(--main-text);
-  transition: 0.3s;
+  transition: 0.2s;
+  white-space: nowrap;
 }
 
 .navigation .nav-list .main-link:hover {
@@ -67,6 +73,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  padding-left: 80px;
 }
 
 .header {
@@ -85,9 +92,7 @@ body {
 }
 
 .banner .img-holder {
-  margin-top: 50px;
   display: flex;
-  width: 100%;
   height: 100%;
   transition: transform 0.5s ease-in-out;
 }
@@ -98,6 +103,12 @@ body {
   flex: 0 0 100%;
   object-fit: cover;
   object-position: center;
+  transition: 0.2s;
+}
+.banner img:hover,
+.banner img:active,
+.banner img:focus {
+  scale: 1.1;
 }
 
 .banner button:hover {
@@ -170,12 +181,15 @@ body {
 
 .container {
   max-width: 1200px;
+  height: 240px;
   margin: 0 auto;
   padding: 24px;
 }
 
 .container h1 {
+  width: 100%;
   font-size: 32px;
+  text-align: center;
 }
 
 .footer {
@@ -245,7 +259,7 @@ body {
 .hero {
   background: var(--accent);
   color: #fff;
-  padding: 80px 20px;
+  padding: 0 20px;
   text-align: center;
 }
 .hero h1 {
@@ -283,8 +297,8 @@ body {
 }
 
 .container {
-  max-width: 800px;
-  margin: 0 auto;
+  height: fit-content;
+  margin: 0 auto 10px;
 }
 
 .program h2 {
@@ -437,5 +451,3 @@ body {
   font-size: 14px;
   color: green;
 }
-
-
