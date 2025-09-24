@@ -57,6 +57,7 @@ footer {
 
 .trainer-info {
   flex: 1 1 50%;
+  border-right: 1px solid #000
 }
 
 .trainer-form {
@@ -70,4 +71,15 @@ footer {
   float: right;
   font-size: 24px;
   cursor: pointer;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input{
+  height: 40px;
+  border-radius: 10px;
 }
