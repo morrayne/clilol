@@ -200,7 +200,7 @@ button{
 .footer {
   background: var(--accent);
   color: var(--main-color);
-  padding: 40px 20px;
+  padding: 40px 20px 0px 20px;
   font-size: 14px;
 }
 
