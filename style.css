@@ -454,3 +454,24 @@ button{
   font-size: 14px;
   color: green;
 }
+
+.theme-toggle{
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: transparent;
+  align-self: center;
+}
+
+.theme-toggle:hover{
+  transform: scale(1.1);
+}
+
+.map{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+}

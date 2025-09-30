@@ -18,8 +18,10 @@ function toggleBurgerMenu() {
   burgerMenuState.isOpen = !burgerMenuState.isOpen;
   if (burgerMenuState.isOpen) {
     openBurgerMenu();
+    burgerMenu.elem.src = "./res/burger-menu-close.svg";
   } else {
     closeBurgerMenu();
+    burgerMenu.elem.src = "./res/burger-menu.svg";
   }
 }
 
@@ -87,7 +89,6 @@ document.addEventListener("click", (e) => {
   }
 });
 
-// Слайдер отзывов
 let currentSlide = 0;
 const slides = document.querySelectorAll(".slide");
 function showSlide(n) {
@@ -103,10 +104,21 @@ document.querySelector(".prev-section").addEventListener("click", () => {
   showSlide(currentSlide);
 });
 
-// Форма
 document.getElementById("contactForm").addEventListener("submit", function (e) {
   e.preventDefault();
   document.getElementById("formMessage").textContent =
     "Спасибо! Мы свяжемся с вами.";
   this.reset();
+});
+
+const themeToggle = document.querySelector(".theme-toggle");
+
+themeToggle.addEventListener("click", () => {
+  themeToggle.classList.add("dark");
+  themeToggle.lastElementChild.src = "./images/icons/moon.svg";
+  if (themeToggle.classList.contains("dark")) {
+    themeToggle.addEventListener("click", () => {
+      themeToggle.lastElementChild.src = "./images/icons/sun.svg";
+    });
+  }
 });

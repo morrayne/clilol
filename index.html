@@ -6,12 +6,18 @@
     <link rel="stylesheet" href="style.css" />
     <script src="./banner.js" type="module" defer></script>
     <script src="./script.js" type="module" defer></script>
+    <script
+      src="https://api-maps.yandex.ru/v3/?apikey=985bbc3b-9a1a-4199-b221-1cd781734a26&lang=ru_RU"
+      defer
+    ></script>
+    <script type="module" src="./map.js" defer></script>
+
     <title>Blue Lock – Футбольная школа</title>
   </head>
   <body>
     <div class="wrapper">
       <div class="navigation">
-        <img src="./res/burger-menu.svg" alt="Меню" />
+        <img src="./res/burger-menu.svg" alt="Меню" class="burger-img" />
         <div class="nav-list">
           <a class="main-link" href="./index.html">Главная</a>
           <a class="main-link" href="./trainers.html">Тренеры</a>
@@ -20,7 +26,7 @@
           <a class="main-link" href="#">Новости</a>
           <a class="main-link" href="#">Контакты</a>
         </div>
-        <button>
+        <button class="theme-toggle">
           <img src="./images/icons/sun.svg" alt="" />
         </button>
       </div>
@@ -67,6 +73,7 @@
                 для будущих чемпионов. Тренировки проходят с опытными тренерами
                 по уникальной методике.
               </p>
+              <img src="./images/about.jpg" alt="" />
             </div>
           </section>
 
@@ -207,7 +214,9 @@
           </section>
 
           <section class="map">
-            <div class="container"></div>
+            <div class="container">
+              <div id="map" style="width: 600px; height: 400px"></div>
+            </div>
           </section>
         </main>
 
