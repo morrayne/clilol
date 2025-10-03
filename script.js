@@ -116,9 +116,4 @@ const themeToggle = document.querySelector(".theme-toggle");
 themeToggle.addEventListener("click", () => {
   themeToggle.classList.add("dark");
   themeToggle.lastElementChild.src = "./images/icons/moon.svg";
-  if (themeToggle.classList.contains("dark")) {
-    themeToggle.addEventListener("click", () => {
-      themeToggle.lastElementChild.src = "./images/icons/sun.svg";
-    });
-  }
 });
