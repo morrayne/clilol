@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Тренеры – Blue Lock</title>
+    <link rel="stylesheet" href="./common/scss/main.css" />
+    <script src="./common/js/trainers.js" defer type="module"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Новый хедер -->
+      <header class="main-header">
+        <div class="header-container">
+          <div class="header-brand">
+            <h1 class="logo">Blue Lock</h1>
+            <span class="logo-subtitle">Футбольная школа</span>
+          </div>
+          
+          <nav class="main-nav">
+            <ul class="nav-list">
+              <li><a href="./index.html" class="nav-link">Главная</a></li>
+              <li><a href="./trainers.html" class="nav-link active">Тренеры</a></li>
+              <li><a href="#" class="nav-link">О школе</a></li>
+              <li><a href="#" class="nav-link">Расписание</a></li>
+              <li><a href="#" class="nav-link">Новости</a></li>
+              <li><a href="#" class="nav-link">Контакты</a></li>
+            </ul>
+          </nav>
+
+          <div class="header-actions">
+            <button class="theme-toggle" aria-label="Сменить тему">
+              <img src="./common/icons/sun.svg" alt="Иконка темы" />
+            </button>
+            <a href="#contact" class="btn btn-primary">Записаться</a>
+          </div>
+        </div>
+      </header>
+
+      <main class="page-content">
+        <div class="container">
+          <!-- Hero секция для тренеров -->
+          <section class="hero-section trainers-hero">
+            <div class="section-header">
+              <h1>Наши тренеры</h1>
+              <p class="section-subtitle">Профессиональные специалисты с большим опытом работы</p>
+            </div>
+          </section>
+
+          <!-- Сетка тренеров -->
+          <section class="trainers-section">
+            <div class="trainers-grid">
+              <!-- Карточка тренера 1 -->
+              <div class="trainer-card" data-id="1">
+                <div class="trainer-image">
+                  <img src="./common/images/dawg.jpg" alt="Иванов Иван Иванович">
+                </div>
+                <div class="trainer-info">
+                  <h3 class="trainer-name">Иванов Иван Иванович</h3>
+                  <p class="trainer-position">Главный тренер</p>
+                  <p class="trainer-experience">Опыт: 12 лет</p>
+                  <div class="trainer-skills">
+                    <span class="skill-tag">Тактика</span>
+                    <span class="skill-tag">Техника</span>
+                    <span class="skill-tag">UEFA Pro</span>
+                  </div>
+                  <button class="btn btn-primary more-btn">Подробнее</button>
+                </div>
+              </div>
+
+              <!-- Карточка тренера 2 -->
+              <div class="trainer-card" data-id="2">
+                <div class="trainer-image">
+                  <img src="./common/images/dawg.jpg" alt="Петров Петр Петрович">
+                </div>
+                <div class="trainer-info">
+                  <h3 class="trainer-name">Петров Петр Петрович</h3>
+                  <p class="trainer-position">Тренер по физподготовке</p>
+                  <p class="trainer-experience">Опыт: 8 лет</p>
+                  <div class="trainer-skills">
+                    <span class="skill-tag">Физподготовка</span>
+                    <span class="skill-tag">Реабилитация</span>
+                    <span class="skill-tag">Фитнес</span>
+                  </div>
+                  <button class="btn btn-primary more-btn">Подробнее</button>
+                </div>
+              </div>
+
+              <!-- Карточка тренера 3 -->
+              <div class="trainer-card" data-id="3">
+                <div class="trainer-image">
+                  <img src="./common/images/dawg.jpg" alt="Сидоров Сергей Сергеевич">
+                </div>
+                <div class="trainer-info">
+                  <h3 class="trainer-name">Сидоров Сергей Сергеевич</h3>
+                  <p class="trainer-position">Ассистент тренера</p>
+                  <p class="trainer-experience">Опыт: 5 лет</p>
+                  <div class="trainer-skills">
+                    <span class="skill-tag">Работа с youth</span>
+                    <span class="skill-tag">Техника</span>
+                    <span class="skill-tag">UEFA A</span>
+                  </div>
+                  <button class="btn btn-primary more-btn">Подробнее</button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- CTA секция -->
+          <section class="cta-section" id="contact">
+            <div class="section-header">
+              <h2>Готовы начать тренировки?</h2>
+              <p class="section-subtitle">Запишитесь на пробное занятие с любым тренером</p>
+            </div>
+            <div class="cta-content">
+              <div class="cta-info">
+                <h3>Бесплатная первая тренировка</h3>
+                <p>Приходите на пробное занятие и оцените наш подход к тренировкам</p>
+                <div class="contact-info">
+                  <p>📞 +7 (999) 123-45-67</p>
+                  <p>✉️ info@bluelock.ru</p>
+                </div>
+              </div>
+              <form class="cta-form">
+                <div class="form-group">
+                  <input type="text" placeholder="Ваше имя" required />
+                </div>
+                <div class="form-group">
+                  <input type="tel" placeholder="Телефон" required />
+                </div>
+                <div class="form-group">
+                  <select required>
+                    <option value="">Выберите тренера</option>
+                    <option value="1">Иванов И.И. (Главный тренер)</option>
+                    <option value="2">Петров П.П. (Физподготовка)</option>
+                    <option value="3">Сидоров С.С. (Ассистент)</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-large btn-primary">Записаться на пробное</button>
+              </form>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <!-- Футер -->
+      <footer class="main-footer">
+        <div class="container">
+          <div class="footer-content">
+            <div class="footer-brand">
+              <h3>Blue Lock</h3>
+              <p>Футбольная школа будущего</p>
+            </div>
+            <div class="footer-links">
+              <div class="footer-nav">
+                <h4>Навигация</h4>
+                <a href="./index.html">Главная</a>
+                <a href="./trainers.html">Тренеры</a>
+                <a href="#">О школе</a>
+                <a href="#">Расписание</a>
+              </div>
+              <div class="footer-contacts">
+                <h4>Контакты</h4>
+                <a href="tel:+79991234567">+7 (999) 123-45-67</a>
+                <a href="mailto:info@bluelock.ru">info@bluelock.ru</a>
+              </div>
+              <div class="footer-socials">
+                <h4>Соцсети</h4>
+                <a href="https://t.me/bluelock" target="_blank">Telegram</a>
+                <a href="https://vk.com/bluelock" target="_blank">ВКонтакте</a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>&copy; 2025 Blue Lock. Все права защищены.</p>
+            <p>ОГРН: 1234567890123 | ИНН: 1234567890</p>
+          </div>
+        </div>
+      </footer>
+
+      <!-- Модальное окно тренера -->
+      <div class="modal" id="trainerModal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="modal-body">
+            <div class="trainer-details">
+              <div class="trainer-main">
+                <div class="trainer-image-large">
+                  <img id="trainerModalImage" src="" alt="">
+                </div>
+                <div class="trainer-basic-info">
+                  <h2 id="trainerModalName"></h2>
+                  <p id="trainerModalPosition"></p>
+                  <p id="trainerModalExperience"></p>
+                  <div id="trainerModalSkills" class="trainer-skills"></div>
+                </div>
+              </div>
+              <div class="trainer-full-info">
+                <h3>О тренере</h3>
+                <p id="trainerModalDescription">
+                  Здесь будет подробная информация о тренере: его образование,
+                  достижения, подход к тренировкам и философия футбола.
+                </p>
+                <div class="trainer-achievements">
+                  <h4>Достижения и квалификация:</h4>
+                  <ul id="trainerModalAchievements"></ul>
+                </div>
+              </div>
+            </div>
+            <div class="trainer-form">
+              <h3>Записаться к тренеру</h3>
+              <form id="trainerContactForm">
+                <input type="hidden" id="selectedTrainerId" name="trainer_id">
+                <div class="form-group">
+                  <input type="text" name="name" placeholder="Ваше имя" required />
+                </div>
+                <div class="form-group">
+                  <input type="tel" name="phone" placeholder="Телефон" required />
+                </div>
+                <div class="form-group">
+                  <input type="email" name="email" placeholder="Email" required />
+                </div>
+                <div class="form-group">
+                  <select name="age_group" required>
+                    <option value="">Возрастная группа</option>
+                    <option value="6-9">6-9 лет</option>
+                    <option value="10-13">10-13 лет</option>
+                    <option value="14-17">14-17 лет</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-primary btn-large">Отправить заявку</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./common/js/script.js"></script>
+    <script src="./common/js/theme.js"></script>
+  </body>
+</html>
