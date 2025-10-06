@@ -365,7 +365,7 @@ section {
 }
 
 .accordion-item {
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid #000;
   border-radius: var(--border-radius);
   margin-bottom: 1rem;
   overflow: hidden;
@@ -528,7 +528,7 @@ section {
     select {
       width: 100%;
       padding: 1rem;
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      border: 1px solid #000;
       border-radius: 8px;
       background: rgba(255, 255, 255, 0.05);
       color: var(--text-1);
