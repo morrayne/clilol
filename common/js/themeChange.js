@@ -1,17 +1,25 @@
 let theme = "dark";
+let accessible = false;
 
-document.querySelector(".theme-toggle").addEventListener("click", function () {
+document.getElementById("changeTheme").addEventListener("click", function () {
   if (theme === "dark") {
     theme = "light";
-    document.documentElement.setAttribute("data-theme", "light");
   } else {
     theme = "dark";
-    document.documentElement.setAttribute("data-theme", "dark");
   }
-  
-  // Обновляем иконку
-  updateThemeIcon();
+  applyTheme();
 });
+
+document.getElementById("changeColor").addEventListener("click", function () {
+  accessible = !accessible;
+  applyTheme();
+});
+
+function applyTheme() {
+  const fullTheme = accessible ? `${theme}-accessible` : theme;
+  document.documentElement.setAttribute("data-theme", fullTheme);
+  updateThemeIcon();
+}
 
 function updateThemeIcon() {
   const themeIcon = document.querySelector(".theme-toggle img");
@@ -25,7 +33,6 @@ function updateThemeIcon() {
 }
 
 // Инициализация при загрузке
-document.addEventListener("DOMContentLoaded", function() {
-  document.documentElement.setAttribute("data-theme", theme);
-  updateThemeIcon();
+document.addEventListener("DOMContentLoaded", function () {
+  applyTheme();
 });
