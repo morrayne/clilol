@@ -17,23 +17,44 @@
             <h1 class="logo">Blue Lock</h1>
             <span class="logo-subtitle">Футбольная школа</span>
           </div>
-          
           <nav class="main-nav">
+            <button class="nav-toggle" aria-label="Открыть меню">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
             <ul class="nav-list">
-              <li><a href="./index.html" class="nav-link">Главная</a></li>
-              <li><a href="./trainers.html" class="nav-link active">Тренеры</a></li>
+              <li>
+                <a href="./index.html" class="nav-link active">Главная</a>
+              </li>
+              <li><a href="./trainers.html" class="nav-link">Тренеры</a></li>
               <li><a href="#" class="nav-link">О школе</a></li>
               <li><a href="#" class="nav-link">Расписание</a></li>
               <li><a href="#" class="nav-link">Новости</a></li>
               <li><a href="#" class="nav-link">Контакты</a></li>
             </ul>
           </nav>
-
           <div class="header-actions">
-            <button class="theme-toggle" aria-label="Сменить тему">
+            <button
+              class="theme-toggle"
+              id="changeTheme"
+              aria-label="Сменить тему"
+            >
               <img src="./common/icons/sun.svg" alt="Иконка темы" />
             </button>
-            <a href="#contact" class="btn btn-primary">Записаться</a>
+            <button
+              class="theme-toggle"
+              id="changeColor"
+              aria-label="Сменить тему"
+            >
+              <img
+                src="./common/icons/blind.svg"
+                alt="Иконка Для Слабовидящих"
+              />
+            </button>
+            <a href="#contact" class="btn btn-primary" style="color: #fff"
+              >Записаться</a
+            >
           </div>
         </div>
       </header>
@@ -44,7 +65,9 @@
           <section class="hero-section trainers-hero">
             <div class="section-header">
               <h1>Наши тренеры</h1>
-              <p class="section-subtitle">Профессиональные специалисты с большим опытом работы</p>
+              <p class="section-subtitle">
+                Профессиональные специалисты с большим опытом работы
+              </p>
             </div>
           </section>
 
@@ -54,7 +77,10 @@
               <!-- Карточка тренера 1 -->
               <div class="trainer-card" data-id="1">
                 <div class="trainer-image">
-                  <img src="./common/images/dawg.jpg" alt="Иванов Иван Иванович">
+                  <img
+                    src="./common/images/dawg.jpg"
+                    alt="Иванов Иван Иванович"
+                  />
                 </div>
                 <div class="trainer-info">
                   <h3 class="trainer-name">Иванов Иван Иванович</h3>
@@ -72,7 +98,10 @@
               <!-- Карточка тренера 2 -->
               <div class="trainer-card" data-id="2">
                 <div class="trainer-image">
-                  <img src="./common/images/dawg.jpg" alt="Петров Петр Петрович">
+                  <img
+                    src="./common/images/dawg.jpg"
+                    alt="Петров Петр Петрович"
+                  />
                 </div>
                 <div class="trainer-info">
                   <h3 class="trainer-name">Петров Петр Петрович</h3>
@@ -90,7 +119,10 @@
               <!-- Карточка тренера 3 -->
               <div class="trainer-card" data-id="3">
                 <div class="trainer-image">
-                  <img src="./common/images/dawg.jpg" alt="Сидоров Сергей Сергеевич">
+                  <img
+                    src="./common/images/dawg.jpg"
+                    alt="Сидоров Сергей Сергеевич"
+                  />
                 </div>
                 <div class="trainer-info">
                   <h3 class="trainer-name">Сидоров Сергей Сергеевич</h3>
@@ -111,12 +143,17 @@
           <section class="cta-section" id="contact">
             <div class="section-header">
               <h2>Готовы начать тренировки?</h2>
-              <p class="section-subtitle">Запишитесь на пробное занятие с любым тренером</p>
+              <p class="section-subtitle">
+                Запишитесь на пробное занятие с любым тренером
+              </p>
             </div>
             <div class="cta-content">
               <div class="cta-info">
                 <h3>Бесплатная первая тренировка</h3>
-                <p>Приходите на пробное занятие и оцените наш подход к тренировкам</p>
+                <p>
+                  Приходите на пробное занятие и оцените наш подход к
+                  тренировкам
+                </p>
                 <div class="contact-info">
                   <p>📞 +7 (999) 123-45-67</p>
                   <p>✉️ info@bluelock.ru</p>
@@ -137,7 +174,9 @@
                     <option value="3">Сидоров С.С. (Ассистент)</option>
                   </select>
                 </div>
-                <button type="submit" class="btn btn-large btn-primary">Записаться на пробное</button>
+                <button type="submit" class="btn btn-large btn-primary">
+                  Записаться на пробное
+                </button>
               </form>
             </div>
           </section>
@@ -187,7 +226,7 @@
             <div class="trainer-details">
               <div class="trainer-main">
                 <div class="trainer-image-large">
-                  <img id="trainerModalImage" src="" alt="">
+                  <img id="trainerModalImage" src="" alt="" />
                 </div>
                 <div class="trainer-basic-info">
                   <h2 id="trainerModalName"></h2>
@@ -211,15 +250,30 @@
             <div class="trainer-form">
               <h3>Записаться к тренеру</h3>
               <form id="trainerContactForm">
-                <input type="hidden" id="selectedTrainerId" name="trainer_id">
+                <input type="hidden" id="selectedTrainerId" name="trainer_id" />
                 <div class="form-group">
-                  <input type="text" name="name" placeholder="Ваше имя" required />
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Ваше имя"
+                    required
+                  />
                 </div>
                 <div class="form-group">
-                  <input type="tel" name="phone" placeholder="Телефон" required />
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Телефон"
+                    required
+                  />
                 </div>
                 <div class="form-group">
-                  <input type="email" name="email" placeholder="Email" required />
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    required
+                  />
                 </div>
                 <div class="form-group">
                   <select name="age_group" required>
@@ -229,7 +283,9 @@
                     <option value="14-17">14-17 лет</option>
                   </select>
                 </div>
-                <button type="submit" class="btn btn-primary btn-large">Отправить заявку</button>
+                <button type="submit" class="btn btn-primary btn-large">
+                  Отправить заявку
+                </button>
               </form>
             </div>
           </div>
